@@ -81,7 +81,7 @@ export class Hero {
 export class AppComponent {
     title = 'Tour of Heroes';
     selectedHero: Hero;
-    public heroes = HEROES;
+    heroes = HEROES;
 
     onSelect(hero: Hero){
         this.selectedHero = hero;
