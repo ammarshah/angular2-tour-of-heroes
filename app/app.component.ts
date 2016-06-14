@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 
 import { Hero } from './hero';
 import { HeroDetailComponent } from './hero-detail.component';
+import { HeroService } from './hero.service';
 
 @Component({
     selector: 'my-app',
@@ -66,7 +67,8 @@ import { HeroDetailComponent } from './hero-detail.component';
             border-radius: 4px 0 0 4px;
         }
         `],
-    directives: [HeroDetailComponent]
+    directives: [HeroDetailComponent],
+    providers: [HeroService]
 
 })
 
@@ -77,5 +79,9 @@ export class AppComponent {
 
     onSelect(hero: Hero){
         this.selectedHero = hero;
+    }
+
+    constructor(private heroService: HeroService) {
+        this.heroes = this.heroService.getHeroes();
     }
 }
