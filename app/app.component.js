@@ -10,7 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var hero_service_1 = require('./hero.service');
-var heroes_component_1 = require('./heroes.component');
+var router_deprecated_1 = require('@angular/router-deprecated');
 var AppComponent = (function () {
     function AppComponent() {
         this.title = 'Tour of Heroes';
@@ -19,8 +19,8 @@ var AppComponent = (function () {
         core_1.Component({
             selector: 'my-app',
             template: "\n    <h1>{{title}}</h1>\n    <my-heroes></my-heroes>\n  ",
-            directives: [heroes_component_1.HeroesComponent],
-            providers: [hero_service_1.HeroService]
+            directives: [router_deprecated_1.ROUTER_DIRECTIVES],
+            providers: [hero_service_1.HeroService, router_deprecated_1.ROUTER_PROVIDERS]
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
